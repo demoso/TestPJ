@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: mytestPj0
   messages:
     basename: i18n/messages
   redis:
@@ -96,3 +98,12 @@ jetcache:
 
   #path to config - redisson.yaml
  # spring.redis.redisson.config=classpath:redisson.yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#  metrics:
+#    tags:
+#      application: UUUUUUTTTTTTTT
+

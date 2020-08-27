@@ -11,8 +11,10 @@ import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +23,7 @@ import java.util.concurrent.TimeUnit;
  * Created by zhenglian on 2016/10/9.
  */
 @Slf4j
-@Controller
+@RestController
 public class HelloController extends LocaleUtil {
 //    @Autowired
 //    private  LocaleUtil localeUtil;
@@ -147,5 +149,19 @@ public class HelloController extends LocaleUtil {
         }
         return  welcome;
 
+    }
+
+
+
+    @GetMapping("/testone")
+    public String test() {
+        log.info("test");
+        return "ok";
+    }
+
+    @GetMapping("testwo")
+    public String home() {
+        log.info("home");
+        return "ok";
     }
 }
