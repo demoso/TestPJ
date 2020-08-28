@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class MathImpl implements IMath {
     @Override
     public int add(int a, int b) {
+        System.out.println(a+""+b);
         return a+b;
     }
 

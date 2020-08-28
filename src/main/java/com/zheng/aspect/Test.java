@@ -8,6 +8,11 @@ public class Test {
         ApplicationContext ac= new AnnotationConfigApplicationContext(Config.class);
         IMath iMath=ac.getBean("mathImpl",IMath.class);
         int i=iMath.add(1,2);
-        System.out.println(i);
+
+//        System.out.println(i);
+//        ProxyUtil proxyUtil= new ProxyUtil(new MathImpl());
+//        IMath iMath1=(IMath) proxyUtil.getProxy();
+//        iMath1.add(23,43);
     }
+
 }
