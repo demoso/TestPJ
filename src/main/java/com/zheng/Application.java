@@ -21,7 +21,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableMethodCache(basePackages = "com.zheng")
 @EnableCreateCacheAnnotation
 @EnableBinding(Source.class)
-//@EnableDistributedLock
+@EnableDistributedLock
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
