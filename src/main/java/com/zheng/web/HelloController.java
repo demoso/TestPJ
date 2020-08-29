@@ -6,6 +6,7 @@ import com.zheng.cache.RedissonService;
 import com.zheng.lock.anno.ProxyAgent;
 import com.zheng.mq.SendMQ;
 import com.zheng.utils.LocaleUtil;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +25,17 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 @RestController
+//@AllArgsConstructor
 public class HelloController extends LocaleUtil {
+    public HelloController(final SendMQ sendMQ, final RedissonService redissonService) {
+        this.sendMQ = sendMQ;
+        this.redissonService = redissonService;
+    }
 //    @Autowired
 //    private  LocaleUtil localeUtil;
-    @Autowired
+    //@Autowired
     private SendMQ sendMQ;
-    @Autowired
+   // @Autowired
     private RedissonService redissonService;
 
 
