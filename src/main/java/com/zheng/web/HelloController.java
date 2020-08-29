@@ -1,6 +1,7 @@
 package com.zheng.web;
 
 import com.alicp.jetcache.anno.Cached;
+import com.baomidou.dynamic.datasource.DynamicRoutingDataSource;
 import com.zheng.cache.RedissonService;
 //import com.zheng.lock.anno.DistributedLock;
 import com.zheng.lock.anno.ProxyAgent;
@@ -10,6 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,16 +29,19 @@ import java.util.concurrent.TimeUnit;
 @RestController
 //@AllArgsConstructor
 public class HelloController extends LocaleUtil {
-    public HelloController(final SendMQ sendMQ, final RedissonService redissonService) {
-        this.sendMQ = sendMQ;
-        this.redissonService = redissonService;
-    }
+//    public HelloController(final SendMQ sendMQ, final RedissonService redissonService) {
+//        this.sendMQ = sendMQ;
+//        this.redissonService = redissonService;
+//    }
 //    @Autowired
 //    private  LocaleUtil localeUtil;
-    //@Autowired
+    @Autowired
     private SendMQ sendMQ;
-   // @Autowired
+    @Autowired
     private RedissonService redissonService;
+//    @Autowired
+//    private DynamicRoutingDataSource dynamicRoutingDataSource;
+
 
 
     @RequestMapping("/hello")
