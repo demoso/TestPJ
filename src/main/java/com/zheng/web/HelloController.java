@@ -1,7 +1,6 @@
 package com.zheng.web;
 
 import com.alicp.jetcache.anno.Cached;
-import com.baomidou.dynamic.datasource.DynamicRoutingDataSource;
 import com.zheng.cache.RedissonService;
 //import com.zheng.lock.anno.DistributedLock;
 import com.zheng.lock.anno.ProxyAgent;
@@ -39,8 +38,7 @@ public class HelloController extends LocaleUtil {
     private SendMQ sendMQ;
     @Autowired
     private RedissonService redissonService;
-//    @Autowired
-//    private DynamicRoutingDataSource dynamicRoutingDataSource;
+
 
 
 
