@@ -1,6 +1,7 @@
 package com.zheng.nimport;
 
-import com.example.demo.condition.Person;
+
+import com.zheng.condition.Person;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;

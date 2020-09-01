@@ -1,6 +1,7 @@
 package com.zheng.nimport;
 
-import com.example.demo.condition.Person;
+
+import com.zheng.condition.Person;
 import org.springframework.context.annotation.Bean;
 
 public class Student {
