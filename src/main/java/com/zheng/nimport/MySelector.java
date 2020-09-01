@@ -8,6 +8,6 @@ import org.springframework.core.type.AnnotationMetadata;
  */
 public class MySelector implements ImportSelector {
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        return new String[]{"com.example.demo.nimport.SelectBean"};
+        return new String[]{"com.zheng.nimport.SelectBean"};
     }
 }
