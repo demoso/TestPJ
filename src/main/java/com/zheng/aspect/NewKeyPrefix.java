@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-public class NewKeyPrefix implements KeyPrefix {
+public class NewKeyPrefix implements KeyPrefix1 {
     private static String DEFAULT_PREFIX="555";
     @Override
     public String getPrefix(){

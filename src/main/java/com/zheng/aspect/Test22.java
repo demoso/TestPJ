@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = Config.class)
 public class Test22 {
     @Autowired
-private KeyPrefix keyPrefix;
+private KeyPrefix1 keyPrefix;
 
 //    public static void main(String[] args) {
 //        ApplicationContext ac= new AnnotationConfigApplicationContext(Config.class);

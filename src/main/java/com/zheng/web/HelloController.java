@@ -1,6 +1,7 @@
 package com.zheng.web;
 
-import com.alicp.jetcache.anno.Cached;
+
+import com.hq.cloud.jcache.anno.Cache;
 import com.zheng.cache.RedissonService;
 //import com.zheng.lock.anno.DistributedLock;
 import com.zheng.lock.anno.ProxyAgent;
@@ -45,7 +46,7 @@ public class HelloController extends LocaleUtil {
     @RequestMapping("/hello")
     @ResponseBody
     //@DistributedLock(key = "yyy:{1}")
-    @Cached(name="userCache-", key="#id", expire = 10)
+    @Cache(name="abcduserCache-", key="#id", expire = 10)
     public String hello( int id) {
         log.info("START:"+new Date());
         RLock lock = redissonService.getRLock("AccountLock:ACCOUNT_SETTLEMENT_LOCK"+id);
@@ -77,7 +78,7 @@ public class HelloController extends LocaleUtil {
     }
     @RequestMapping("/hello3")
     @ResponseBody
-    @Cached
+    @Cache
     public String hello3(int id) {
         String welcome = getMsg("welcome");
         System.out.println(welcome);
@@ -87,7 +88,7 @@ public class HelloController extends LocaleUtil {
     @RequestMapping("/hello4")
     @ResponseBody
     //@DistributedLock(key = "yyy")
-    @Cached(name="userCache-", key="#id", expire = 10)
+    @Cache(name="userCache-", key="#id", expire = 10)
     public String hello4( int id) {
         log.info("START:"+new Date());
         RLock lock = redissonService.getRLock("AccountLock:ACCOUNT_SETTLEMENT_LOCK"+id);

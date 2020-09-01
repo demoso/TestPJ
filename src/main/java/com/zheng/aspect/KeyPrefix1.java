@@ -6,6 +6,6 @@ package com.zheng.aspect;
 /**
  * @author <a href="mailto:areyouok@gmail.com">huangli</a>
  */
-public interface KeyPrefix {
+public interface KeyPrefix1 {
     String getPrefix();
 }

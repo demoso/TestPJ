@@ -67,7 +67,7 @@ spring:
 #                  password: admin
 #                  virtual-host: /
 
-jetcache:
+jcache:
   statIntervalMinutes: 15
   areaInCacheName: false
   local:

@@ -1,7 +1,8 @@
 package com.zheng;
 
-import com.alicp.jetcache.anno.config.EnableCreateCacheAnnotation;
-import com.alicp.jetcache.anno.config.EnableMethodCache;
+
+import com.hq.cloud.jcache.anno.config.EnableCreateCacheAnnotation;
+import com.hq.cloud.jcache.anno.config.EnableMethodCache;
 import com.zheng.lock.anno.EnableDistributedLock;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Value;
